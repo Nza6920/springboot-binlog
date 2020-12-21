@@ -1,0 +1,17 @@
+server:
+  port: 7016
+
+spring:
+  datasource:
+    url:  jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+    username: root
+    password: nza08157016.
+    driver-class-name: com.mysql.jdbc.Driver
+
+
+mysql-binlog-connect-java:
+  datasource:
+    dbname: test
+    port: 3306
+    username: root
+    password: nza08157016.
