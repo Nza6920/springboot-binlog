@@ -65,7 +65,7 @@ public class MySqlBinlogConnectJavaAutoConfiguration {
         if (StringUtils.isNotEmpty(filename)) {
             // 设置 Binlog 文件名
             client.setBinlogFilename(filename);
-            
+
             Long position = binlogInfoService.getBinlogNextPosition();
             if (position != null) {
                 // 设置 Binlog 起始位置
