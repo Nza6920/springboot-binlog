@@ -36,3 +36,8 @@ build/
 mvnw
 mvnw.cmd
 .mvn
+
+application.yml
+src/main/resources/static/
+src/main/resources/templates/
+src/test/

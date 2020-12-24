@@ -1,2 +1,2 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-com.niu.springboot.config.MySqlBinlogConnectJavaAutoConfiguration
+com.niu.springboot.autoconfig.MySqlBinlogConnectJavaAutoConfiguration

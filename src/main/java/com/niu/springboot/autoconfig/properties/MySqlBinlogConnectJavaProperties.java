@@ -1,4 +1,4 @@
-package com.niu.springboot.config.properties;
+package com.niu.springboot.autoconfig.properties;
 
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
@@ -15,9 +15,14 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 public class MySqlBinlogConnectJavaProperties {
 
     /**
+     * 数据库IP
+     */
+    private String hostname;
+
+    /**
      * 数据库名称
      */
-    private String dbname;
+    private String schema;
 
     /**
      * 端口
