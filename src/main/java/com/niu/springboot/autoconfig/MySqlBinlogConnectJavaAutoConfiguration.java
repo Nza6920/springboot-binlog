@@ -61,17 +61,17 @@ public class MySqlBinlogConnectJavaAutoConfiguration {
         // 添加事件处理器
         client.registerEventListener(dataCollectionService::collectionIncrementalData);
 
-        Long position = binlogInfoService.getBinlogNextPosition();
         String filename = binlogInfoService.getBinlogFileName();
-        if (position != null) {
-            // 设置 Binlog 起始位置
-            client.setBinlogPosition(position);
-        }
         if (StringUtils.isNotEmpty(filename)) {
             // 设置 Binlog 文件名
             client.setBinlogFilename(filename);
+            
+            Long position = binlogInfoService.getBinlogNextPosition();
+            if (position != null) {
+                // 设置 Binlog 起始位置
+                client.setBinlogPosition(position);
+            }
         }
-
         client.connect();
     }
 
