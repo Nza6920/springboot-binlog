@@ -109,22 +109,22 @@ public class BinlogRowDataDTO {
      * @createTime 2020/12/23 11:27
      */
     public List<String> getSql(String targetTable) {
-        List<String> sqlLists = Lists.newArrayList();
+        List<String> sqlList = Lists.newArrayList();
         switch (eventType) {
             case EXT_WRITE_ROWS:
-                handleWriteRows(sqlLists, targetTable);
+                handleWriteRows(sqlList, targetTable);
                 break;
             case EXT_UPDATE_ROWS:
-                handleUpdateRows(sqlLists, targetTable);
+                handleUpdateRows(sqlList, targetTable);
                 break;
             case EXT_DELETE_ROWS:
-                handleDeleteRows(sqlLists, targetTable);
+                handleDeleteRows(sqlList, targetTable);
                 break;
             default:
                 return null;
         }
 
-        return sqlLists;
+        return sqlList;
     }
 
     /**
