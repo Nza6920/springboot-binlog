@@ -41,8 +41,10 @@ public class SysDictionaryServiceImpl implements SysDictionaryService {
 
     @Override
     public String getValByKey(SysDictionaryEnum key) {
-        String sql = MessageFormat.format(SELECT_SQL_TEMPLATE, key);
-        List<String> res = jdbcTemplate.query(sql, new String[]{key.getKey()}, (rs, i) -> rs.getString("value"));
+        String sql = MessageFormat.format(SELECT_SQL_TEMPLATE, key.getKey());
+        List<String> res = jdbcTemplate.query(sql,
+                new String[]{key.getKey()},
+                (rs, i) -> rs.getString("value"));
         return res.get(0);
     }
 }
