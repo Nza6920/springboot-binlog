@@ -12,10 +12,20 @@ logging:
 
 spring:
   datasource:
-    url:  jdbc:mysql://*****:****/test?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
-    username: *****
-    password: *****
-    driver-class-name: com.mysql.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url:  jdbc:mysql://*****:****/test?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+      username: *****
+      password: *****
+      initial-size: 10
+      max-active: 100
+      min-idle: 10
+      max-wait: 60000
+      pool-prepared-statements: true
+      max-pool-prepared-statement-per-connection-size: 20
+      time-between-eviction-runs-millis: 60000
+      min-evictable-idle-time-millis: 300000
 
 mysql-binlog-connect-java:
   datasource:
