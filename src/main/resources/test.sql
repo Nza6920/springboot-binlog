@@ -66,3 +66,6 @@ CREATE TABLE `sys_dictionary` (
 -- ----------------------------
 INSERT INTO `sys_dictionary` VALUES ('1', 'BIN_LOG_FILE_NAME', '');
 INSERT INTO `sys_dictionary` VALUES ('2', 'BIN_LOG_NEXT_POSITION', '');
+
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '123456';
+FLUSH PRIVILEGES;

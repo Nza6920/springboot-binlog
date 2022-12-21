@@ -84,7 +84,7 @@ public class DataCollectionServiceImpl implements DataCollectionService {
         SQL_SCHEMA = "select table_schema, table_name, column_name, ordinal_position from information_schema.columns where table_schema = ? and table_name = ?";
         SQL_PRIMARY_SCHEMA = "select column_name, column_key from information_schema.columns where table_schema = ? and table_name = ? and column_key = 'PRI'";
         ALLOW_COLLECTION_TYPES = Lists.newArrayList(EventType.EXT_UPDATE_ROWS, EventType.EXT_WRITE_ROWS, EventType.EXT_DELETE_ROWS);
-        ALLOW_COLLECTION_SCHEMAS = Lists.newArrayList("test");
+        ALLOW_COLLECTION_SCHEMAS = Lists.newArrayList("test_log");
         ALLOW_COLLECTION_TABLES = Lists.newArrayList("sys_config");
         NORMAL_TYPE = Lists.newArrayList(byte.class, Byte.class,
                 short.class, Short.class,
