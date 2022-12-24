@@ -3,7 +3,7 @@ server:
     uri-encoding: UTF-8
     max-threads: 1000
     min-spare-threads: 30
-  port: 7016
+  port: 7017
 
 logging:
   config: classpath:logback-spring.xml
@@ -14,36 +14,14 @@ spring:
     name: canal-example
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/test_log?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+    url: jdbc:mysql://192.168.60.230:3306/erp-dev?useAffectedRows=true&serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=UTF-8&useFastDateParsing=false&allowMultiQueries=true
     username: root
-    password: 123456
-#    type: com.alibaba.druid.pool.DruidDataSource
-#    druid:
-#      driver-class-name: com.mysql.cj.jdbc.Driver
-#      url: jdbc:mysql://localhost:3306/test_log?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
-#      username: root
-#      password: 123456
-#      initial-size: 10
-#      max-active: 100
-#      min-idle: 10
-#      max-wait: 60000
-#      pool-prepared-statements: true
-#      max-pool-prepared-statement-per-connection-size: 20
-#      time-between-eviction-runs-millis: 60000
-#      min-evictable-idle-time-millis: 300000
-
-#mysql-binlog-connect-java:
-#      datasource:
-#        hostname: 127.0.0.1
-#        port: 3306
-#        username: root
-#        password: 123456
-#        schema: test_log
+    password: YXJJ@2099
 
 
 canal:
-  destination: example # canal的集群名字，要与安装canal时设置的名称一致
-  server: 127.0.0.1:11111 # canal服务地址
+  destination: example
+  server: 192.168.60.230:11111
   filter: ""
-#  userName: root
-#  password: 123456
+##  userName: root
+##  password: YXJJ@2099
