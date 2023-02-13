@@ -1,0 +1,27 @@
+server:
+  tomcat:
+    uri-encoding: UTF-8
+    max-threads: 1000
+    min-spare-threads: 30
+  port: 7017
+
+logging:
+  config: classpath:logback-spring.xml
+  level:
+    root: info
+spring:
+  application:
+    name: canal-example
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://192.168.60.230:3306/erp-dev?useAffectedRows=true&serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=UTF-8&useFastDateParsing=false&allowMultiQueries=true
+    username: root
+    password: YXJJ@2099
+
+
+canal:
+  destination: example
+  server: 192.168.60.230:11111
+  filter: ""
+##  userName: root
+##  password: YXJJ@2099
