@@ -33,9 +33,12 @@ build/
 .vscode/
 
 ### MVN ###
-mvnw
-mvnw.cmd
-.mvn
+!.mvn/
+!.mvn/wrapper/maven-wrapper.jar
+!.mvn/wrapper/maven-wrapper.properties
+!mvnw
+!mvnw.cmd
+.mvn-home/
 
 application.yml
 src/main/resources/static/
