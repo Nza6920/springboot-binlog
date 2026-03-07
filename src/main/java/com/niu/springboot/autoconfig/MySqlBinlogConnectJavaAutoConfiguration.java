@@ -5,16 +5,15 @@ import com.github.shyiko.mysql.binlog.event.deserialization.EventDeserializer;
 import com.niu.springboot.autoconfig.service.BinlogInfoService;
 import com.niu.springboot.autoconfig.properties.MySqlBinlogConnectJavaProperties;
 import com.niu.springboot.autoconfig.service.DataCollectionService;
+import jakarta.annotation.PostConstruct;
 import lombok.AllArgsConstructor;
 import org.apache.commons.lang3.StringUtils;
+import org.springframework.boot.autoconfigure.AutoConfiguration;
 import org.springframework.beans.factory.NoSuchBeanDefinitionException;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.ApplicationContext;
-import org.springframework.context.annotation.Configuration;
-
-import javax.annotation.PostConstruct;
 import java.io.IOException;
 
 
@@ -25,7 +24,7 @@ import java.io.IOException;
  * @version 1.0 [2020/12/21 11:29]
  * @createTime [2020/12/21 11:29]
  */
-@Configuration
+@AutoConfiguration
 @EnableConfigurationProperties({MySqlBinlogConnectJavaProperties.class})
 @ConditionalOnBean({DataCollectionService.class, BinlogInfoService.class})
 @ConditionalOnProperty("mysql-binlog-connect-java.datasource.hostname")

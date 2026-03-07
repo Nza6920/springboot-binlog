@@ -25,12 +25,12 @@
 - [ ] 修复已废弃配置项和启动告警
 
 ## 3. 升级到 Spring Boot 3.5.x
-- [ ] 将父版本从 `2.7.x` 升级到最新 `3.5.x`
-- [ ] 处理 `javax.*` → `jakarta.*` 命名空间迁移
-- [ ] 检查自动配置机制变化，评估 `src/main/resources/META-INF/spring.factories`
-- [ ] 视需要迁移到 `AutoConfiguration.imports`
-- [ ] 升级 Lombok 到支持 Java 21 / Boot 3 的版本
-- [ ] 升级 Druid 或替换为兼容的数据源方案
+- [x] 将父版本从 `2.7.x` 升级到最新 `3.5.x`
+- [x] 处理 `javax.*` → `jakarta.*` 命名空间迁移
+- [x] 检查自动配置机制变化，评估 `src/main/resources/META-INF/spring.factories`
+- [x] 视需要迁移到 `AutoConfiguration.imports`
+- [x] 升级 Lombok 到支持 Java 21 / Boot 3 的版本
+- [x] 升级 Druid 或替换为兼容的数据源方案
 - [ ] 运行编译、测试、启动验证
 
 ## 4. 升级到 Spring Boot 4.0.2
@@ -41,7 +41,7 @@
 - [ ] 再次执行完整构建和启动验证
 
 ## 5. 仓库内重点检查项
-- [ ] 验证 `src/main/java/com/niu/springboot/autoconfig` 下自动配置是否正常
+- [x] 验证 `src/main/java/com/niu/springboot/autoconfig` 下自动配置是否正常
 - [ ] 验证 `src/main/resources/application.yml.example` 是否仍完整
 - [ ] 验证 `src/main/resources/logback-spring.xml` 是否兼容
 - [ ] 验证 binlog 连接、位点读取、字典查询逻辑
